@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>A Place For Projects - Blog</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+  background-color: #666;
+  padding: 5px;
+  text-align: center;
+  font-size: 25px;
+  color: white;
+}
+
+.sidebar {
+  float: left;
+  width: 30%;
+  height: 500px; /* only for demonstration, should be removed */
+  background: #ccc;
+  overflow-y:scroll;
+}
+
+
+/* Style the list inside the menu */
+
+.flex-container{
+    display:flex;
+    flex-direction: row;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  border:solid;
+}
+
+li {
+  float: left;
+}
+
+#horizontal {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 30px;
+  text-decoration: none;
+}
+.active {
+  background-color: #04AA6D;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  background-color: #8e8e8e;
+}
+#item:hover{
+  background-color: #8e8e8e;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 70%;
+  background-color: #f1f1f1;
+  height: 500px; /* only for demonstration, should be removed */
+}
+
+/* Clear floats after the columns */
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+footer {
+  background-color: #777;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<header>
+  <h2>A Place For Projects</h2>
+</header>
+
+<ul style="background-color: #333;">
+  <div class="flex-container" style="justify-content: center;">
+    <li style="flex-grow: 1;">
+      <a href="../index.html" id="horizontal">
+        Home
+      </a>
+    </li>
+    <li style="flex-grow: 1;">
+      <a href="../STEM/fishing.html" id="horizontal">
+        STEM
+      </a>
+    </li>
+    <li style="flex-grow: 1;">
+      <a href="blog_post_2.html" id="horizontal" class="active">
+        Blog
+      </a>
+    </li>
+    <li style="flex-grow: 1;">
+      <a href="index.html" id="horizontal">
+        Music
+      </a>
+    </li>
+    <li style="flex-grow: 1;">
+      <a href="../index.html" id="horizontal">
+        Visual Art
+      </a>
+    </li>
+  </div>
+</ul>
+
+<section>
+  <div class="sidebar" style="padding:10px 0 0 0">
+    <div class="flex-container" style="flex-direction: column;">
+      <div class="flex-container" style="flex-direction: row;border: solid;">
+        <div style="width: 20%;border-right: solid;text-align: center;">Index</div>
+        <div style="width: 80%;padding-left: 4px;">Title</div>
+      </div>
+      <div id="item" class="flex-container" style="flex-direction: row;cursor: pointer;border-left: solid;border-right: solid;border-bottom: solid;" onclick="location.href='blog_post_2.html';">
+        <div style="width: 20%;border-right: solid;">
+          <p style="font-size: 14px;text-align: center;">0</p>
+        </div>
+        <div style="width: 80%;padding-left: 4px;">
+          <p style="font-size: 14px;">A poem to my people</p>
+        </div>
+      </div>
+
+      <div id="item" class="flex-container" style="flex-direction: row;cursor: pointer;border-left: solid;border-right: solid;border-bottom: solid;" onclick="location.href='blog_post_3.html';">
+        <div style="width: 20%;border-right: solid;">
+          <p style="font-size: 14px;text-align: center;">1</p>
+        </div>
+        <div style="width: 80%;padding-left: 4px;">
+          <p style="font-size: 14px;">Discussion on 'slacktivism'</p>
+        </div>
+
+      </div>
+      <div id="item" class="flex-container" style="flex-direction: row;cursor: pointer;border-left: solid;border-right: solid;border-bottom: solid;" onclick="location.href='blog_post_1.html';">
+        <div style="width: 20%;border-right: solid;">
+          <p style="font-size: 14px;text-align: center;">2</p>
+        </div>
+        <div style="width: 80%;padding-left: 4px;">
+          <p style="font-size: 14px;">Personal apocolypse</p>
+        </div>
+
+      </div>
+      <div id="item" class="flex-container" style="flex-direction: row;cursor: pointer;border-left: solid;border-right: solid;border-bottom: solid;" onclick="location.href='blog_post_0.html';">
+        <div style="width: 20%;border-right: solid;">
+          <p style="font-size: 14px;text-align: center;">3</p>
+        </div>
+        <div style="width: 80%;padding-left: 4px;">
+          <p style="font-size: 14px;">Collective love</p>
+        </div>
+      </div>
+      <div id="item" class="flex-container" style="flex-direction: row;cursor: pointer;border-left: solid;border-right: solid;border-bottom: solid;" onclick="location.href='blog_post_4.html';">
+        <div style="width: 20%;border-right: solid;">
+          <p style="font-size: 14px;text-align: center;">4</p>
+        </div>
+        <div style="width: 80%;padding-left: 4px;">
+          <p style="font-size: 14px;">Fievel's adventure story</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <article style="overflow-y:scroll">
+    <img src="src/feivel.jpg" width="300px">
+    <h3 style="text-align: center;">Fievel's adventure story</h3>
+    <p>
+      I heard the Rumbling and immediately dropped my task of trying to chew my way through a 
+      plastic wrapper. Luckily I’d found it right next to the entrance of our home: a box we’d 
+      stuck into the corner of our world. I scurried inside, relieved to see most of my family 
+      already there. They all looked groggy, presumably all having just been woken up from their 
+      group nap by the terrible noise crashing around us.
+    </p>
+    <p>
+      “Mom and Dad aren't back yet.” I stated nervously to Quagmire, who had come up beside me rubbing his 
+      eyes sleepily.
+    </p>
+    <p>
+      “Probably just around the corner” He responded. “They said they weren’t going far today.”
+    </p>
+    <p>
+      “Yeah I hope you’re right.”
+    </p>
+    <p>
+      Ten tense seconds passed. The Rumbling just kept getting louder and louder. Just then, 
+      careening around the corner of an old rusty structure came Mom and Dad, neck in neck as 
+      they sprinted for our home. Their whiskers brushed together as they leapt in synchronicity 
+      through a tissue box.
+    </p>
+    <p>
+      Suddenly there was the Silence: the moment of pause before the Tremors. I could all of a 
+      sudden feel my heartbeat, pounding quick and heavy. Mom kept her pace without wavering, but 
+      Dad stopped for a moment, startled by the sudden change. Silence gave way to the Tremors, 
+      shaking the world with terrible power. I watched in helpless horror as a giant metal box 
+      tipped over and crashed into the space between Mom and Dad. She had stopped when she noticed 
+      he was no longer beside her, and looked back to see the look of paralyzed fear on his face 
+      as the metal box closed them off from each other. She turned back to us for a moment. She 
+      looked right at me. I wanted to yell but the words were caught in my throat. She had a grim 
+      look on her face as she turned back. The last I saw of her was her deftly leaping onto a 
+      candle and launching herself on top of the fallen metal box.
+    </p>
+    <p>
+      The Lifting began and I felt tears well up in my eyes. I fell back into the padding of our 
+      home, letting go as the world turned to chaos. I saw brief flashes of light amidst the chaos 
+      as I tumbled around with my family members. Eventually, there was only quiet again, and the 
+      Upheaval was over. One by one we clambered out of our home, dazed and confused, bleary eyed 
+      in the harsh sunlight.
+    </p>
+    <p>
+      "Listen up guys." Said Quagmire to the family of 22 mice. "We need to get organized for a bit." 
+    </p>
+      "Shouldn't we wait for Mom and Dad?" Interrupted a mouse named Othello. "They're still in the House."
+    <p>
+      Quagmire was quiet. I decided to speak up to fill the silence. "They..." I realized I didn't know how to 
+      finish my sentence.
+    </p>
+    <p>
+      "They didn't make it." Finished Quagmire.
+    </p>
+    <p>
+      "But-but that doesn't make sense. What are you talking about?"
+    </p>
+    <p>
+      "It means they're gone, Othello. They were taken by the Heaver." Quagmire's voice was gentle,
+      but there was a tremble in it that he was trying hard to hide. I could tell he was struggling to keep it
+      together.
+    </p>
+    <p>
+      "He's right." I spoke up. "I saw it happen. Mom was close, but she turned back because Dad got 
+      stuck by the Tremors. Then the Lifting started. That's the last I saw of them."
+    </p>
+    <p>
+      "So what are we going to do?!" Panic rose in Othello's voice and it reverberated through 
+      the crowd of 22 other mice. A frantic whisper spread through the group.
+    </p>
+    <p>
+      "We're going to keep doing what we were doing before the Upheaval." Quagmire shouted to the whole,
+      silencing the whispers. "Stash the food storage back up with what fell out. Keep looking for Stickies.
+      That's what Mom said to do."
+    </p>
+    <p>
+      "We haven't found any Stickies in <i>days!</i> Quagmire." 
+    </p>
+    <p>
+      "Well what's your big idea Othello?" Shot back Quagmire. He was getting angry, and I was getting worried.
+    </p>
+    <p>
+      "I think we should stop acting like everything is okay. Mom and Dad are <i>gone</i>. And you just want us
+      to continue on like nothing happened? You're absolutely delusional if you think I'm going to listen to that."
+    </p>
+    <p>
+      "You know what Othello, go chew a rock."
+    </p>
+    <p>
+      The whole crowd erupted into shouting. A mouse named Sycamore grabbed Othello's attention and looked to be
+      trying to defend Quagmire. I tugged on Quagmire's ear and we stepped away. "Maybe Othello's onto something."
+    </p>
+    <p>
+      Quagmire rolled his eyes. "You've gotta be kidding me."
+    </p>
+    <p>
+      "I'm serious Quagmire. Maybe we should take this as an opportunity to change how we think about things a bit."
+    </p>
+    <p>
+      "This is exactly the time when it's most important to stick to the plan. It's the best chance we have to keep
+      us all alive."
+    </p>
+    <p>
+      "Why, because that's what Mom said? She didn't know everything you know."
+    </p>
+    <p>
+      "Shut up Fievel." Quagmire said quietly. His words stung, and I realized I'd hit a big nerve for him to lash out
+      like that.
+    </p>
+    <p>
+      "Look-I'm sorry. That was insensitive. I'm just... I'm trying to figure out if the best course of action
+      changes if we zoom out a big on the bigger picture."
+    </p>
+    <p>
+      Quagmire's anger seemed to cool a little. "Fine. Go on."
+    </p>
+    <p>
+      "I think we should consider the possibility that finding the giant roll of Sticky all that time ago was an
+      anomaly."
+    </p>
+    <p>
+      "We found that jar the other day, with a bit of Sticky at the bottom!" Argued Quagmire.
+    </p>
+    <p>
+      "That was the first one we've found in <i>days</i>. And we can't stop the Littles from picking away at it.
+      Most of it is already gone. Maybe our survival this far using Stickies that get dropped in here has been
+      strokes of luck that won't hold up forever."
+    </p>
+    <p>
+      "Well what do you propose instead Sister?" He asked. 
+    </p>
+    <p>
+      "Well... I could go look for some." Quagmire stared at me blankly so I continued. "Like... Outside the World."
+    </p>
+    <p>
+      "Oh not this again! We've talked about this Fievel."
+    </p>
+    <p>
+      I shift back and forth on my feet in frustratedly. "It's the best idea we have besides waiting and praying, Brother. And
+      you all can keep doing that, but I've been <i>losing</i> my <i>mind</i> here. I need to go do something else. To go
+      <i>try</i> something else."
+    </p>
+    <p>
+      "I'm sorry Fievel but I just can't think about this right now." Quagmire's tone softened as he continued and he
+      grimaced, the pain clearly displayed on his face. "It's too upsetting to talk about any more. We just lost Mom and Dad. I... 
+      I don't want to lose you too."
+    </p>
+    <p>
+      My frustration receded with his display of vulnerability, replaced by panic as he turned to return his attention to the 
+      crowd of arguing mice. The group had thinned considerably, some mice going back into the home, some had gone off to 
+      hunt for scraps remaining after the Upheaval, but the vast majority were still standing around shouting at each other.
+      Before I could think better of it, I blurted "I could find Mom and Dad."
+    </p>  
+    <p>
+      He stopped, turning slowly back towards me. He said nothing, just looked at me. He looked frustrated, with a hint of fear.
+      Fear of hope.
+    </p>
+    <p>
+      My words came rushing out now, my tail flicking around nervously. "Maybe they didn't get swept up 
+      by the Heaver. Maybe they landed in the Outside, running around trying to make it in that new World. Maybe- maybe if I got 
+      out too then I could find them, and together we could find some way to  get back in here." My words successfully ignited 
+      the hope in him, now burning bright in his eyes. I felt a pang of guilt for having manipulated him a little bit.
+    </p>
+    <p>
+      "Why are you so desperate to get me on board with this Fievel?"
+    </p>
+
+    <p>
+      ...
+    </p>
+    <p>
+      I wandered idly along the barren floor of our World. Already a giant metal box had been dropped in. I recognized 
+      this type, it had a button that if you pushed with enough force would pop open the front of it. The interior 
+      sometimes held little crumbs and sugary residue, a tasty afternoon snack for a hungry mouse such as myself. 
+    </p>
+    <p>  
+      I thought about Quagmire confessing his fear about losing me. He very seldom talks about his feelings like that, a habit 
+      that I think he got that way from watching Mom. He saw her as having this drive to hide her vulnerability. I guess in 
+      his mind she wanted to shield us from uncertainty.
+    </p>
+  </article>
+</section>
+
+<footer>
+</footer>
+
+</body>
+</html>
+
