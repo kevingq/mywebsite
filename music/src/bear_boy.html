@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>A Place For Projects - Programming</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+header {
+  background-color: #666;
+  padding: 5px;
+  text-align: center;
+  font-size: 25px;
+  color: white;
+}
+
+/* Create two columns/boxes that floats next to each other */
+.sidebar {
+  float: left;
+  width: 30%;
+  height: 500px; /* only for demonstration, should be removed */
+  background: #ccc;
+  overflow-y:scroll;
+}
+
+
+/* Style the list inside the menu */
+
+.flex-container{
+    display:flex;
+    flex-direction: row;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  border:solid;
+}
+
+li {
+  float: left;
+}
+
+#horizontal {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 30px;
+  text-decoration: none;
+}
+.active {
+  background-color: #04AA6D;
+}
+li a:hover {
+  background-color: #8e8e8e;
+}
+.album_item:hover{
+  background-color: #8e8e8ed5;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 70%;
+  background-color: #f1f1f1;
+  height: 500px; /* only for demonstration, should be removed */
+}
+
+/* Clear floats after the columns */
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+footer {
+  background-color: #777;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<header>
+  <h2>A Place For Projects</h2>
+</header>
+
+<ul style="background-color: #333;">
+  <div class="flex-container" style="justify-content: center;">
+    <li style="flex-grow: 1;">
+      <a href="../index.html" id="horizontal">
+        Home
+      </a>
+    </li>
+    
+    <li style="flex-grow: 1;">
+      <a href="../STEM/fishing.html" id="horizontal">
+        STEM
+      </a>
+    </li>
+    <li style="flex-grow: 1;">
+      <a href="../Blog/blog_post_2.html" id="horizontal">
+        Blog
+      </a>
+    </li>
+    <li style="flex-grow: 1;">
+      <a href="bear_boy.html" id="horizontal"  class="active">
+        Music
+      </a>
+    </li>
+    <li style="flex-grow: 1;">
+      <a href="../index.html" id="horizontal">
+        Visual Art
+      </a>
+    </li>
+  </div>
+</ul>
+
+<section>
+  <div class="sidebar" style="padding:10px 0 0 0">
+    <ul style="background-color: #c9c9c9;">
+      <li class="album_item">
+        <div style="display: flex;flex-direction: row;align-items: center;">
+          <img src="src/Bear Boy (mastered)/artwork.PNG" style="width: 20%;">
+          <div style="padding:5px;" >
+            <a href="bear_boy.html">
+              <h4>Bear Boy - Brynn Emond</h4>
+            </a>
+          </div>
+        </div>
+      </li>
+      <li class="album_item">
+        <div style="display: flex;flex-direction: row;align-items: center;">
+          <img src="src/Alpacas Stole Your Birthday Card/artwork.jpg" style="width: 20%;">
+          <div style="padding:5px;" >
+            <a href="bear_boy.html">
+              <h4>Alpacas Stole Your Birthday Card - Wool Sweater</h4>
+            </a>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  
+  <article style="overflow-y:scroll">
+    <p>
+      This part of the site is still under construction. Ideally at some point you'll be able to listen to
+      the album using an interface located here.
+    </p>
+  </article>
+</section>
+
+<footer>
+</footer>
+
+</body>
+</html>
+
