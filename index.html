@@ -1,1 +1,151 @@
-hello world
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>A Place For Stuff - Home</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+  background-color: #666;
+  padding: 5px;
+  text-align: center;
+  font-size: 25px;
+  color: white;
+}
+
+.sidebar {
+  float: left;
+  width: 30%;
+  height: 500px; /* only for demonstration, should be removed */
+  background: #ccc;
+  overflow-y:scroll;
+}
+
+.flex-container{
+    display:flex;
+    flex-direction: row;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  border:solid;
+}
+
+li {
+  float: left;
+}
+
+#horizontal {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 30px;
+  text-decoration: none;
+}
+.active {
+  background-color: #04AA6D;
+}
+
+li a:hover {
+  background-color: #8e8e8e;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 100%;
+  background-color: #f1f1f1;
+  height: 500px; /* only for demonstration, should be removed */
+}
+
+/* Clear floats after the columns */
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+footer {
+  background-color: #777;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
+
+</style>
+
+</head>
+<body>
+
+<header>
+  <h2>A Place For Projects</h2>
+</header>
+
+<ul style="background-color: #333;">
+  <div class="flex-container" style="justify-content: center;">
+    <li style="flex-grow: 1;">
+      <a href="index.html" id="horizontal" class="active">
+        Home
+      </a>
+    </li>
+    <li style="flex-grow: 1;">
+      <a href="STEM/fishing.html" id="horizontal">
+        STEM
+      </a>
+    </li>
+    <li style="flex-grow: 1;">
+      <a href="Blog/blog_post_0.html" id="horizontal">
+        Blog
+      </a>
+    </li>
+    <li style="flex-grow: 1;">
+      <a href="Music/bear_boy.html" id="horizontal">
+        Music
+      </a>
+    </li>
+    <li style="flex-grow: 1;">
+      <a href="index.html" id="horizontal">
+        Visual Art
+      </a>
+    </li>
+    
+  </div>
+</ul>
+
+<section>
+  <article style="overflow-y:scroll">
+    <h1>Hello!</h1>
+    <p>
+      This is a website designed as a repository for various different types of projects. 
+      The projects are organized into categories that can be selected using the navigation bar shown above.
+    </p>
+  </article>
+</section>
+
+<footer>
+</footer>
+
+</body>
+</html>
+
