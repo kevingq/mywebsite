@@ -152,7 +152,7 @@ document.addEventListener('keydown', (event) => {
         case 'd':
             boat.velocity.x = 2
             break
-        case 'p':
+        case 'c':
             for (let i = 0, len = spriteList.length; i < len; i++) {
                 if(boat.position.x+boat.size.x > spriteList[i].position.x &&
                     boat.position.x < spriteList[i].position.x+spriteList[i].size.x &&
