@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>A Place For Projects - Programming</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    /* Style the header */
+    header {
+      background-color: #666;
+      padding: 5px;
+      text-align: center;
+      font-size: 25px;
+      color: white;
+    }
+
+    /* Create two columns/boxes that floats next to each other */
+    .sidebar {
+      float: left;
+      width: 30%;
+      height: 500px; /* only for demonstration, should be removed */
+      background: #ccc;
+      overflow-y:scroll;
+    }
+
+
+    /* Style the list inside the menu */
+
+    .flex-container{
+        display:flex;
+        flex-direction: row;
+    }
+
+    .navBar {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      border:solid;
+    }
+
+    #horizontal {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 30px;
+      text-decoration: none;
+    }
+    .active {
+      background-color: #04AA6D;
+    }
+
+    /* Change the link color to #111 (black) on hover */
+    li a:hover {
+      background-color: #8e8e8e;
+    }
+
+    article {
+      float: left;
+      padding: 20px;
+      width: 70%;
+      background-color: #f1f1f1;
+      height: 500px; /* only for demonstration, should be removed */
+    }
+
+    section::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    footer {
+      background-color: #777;
+      padding: 10px;
+      text-align: center;
+      color: white;
+    }
+
+    @media (max-width: 600px) {
+      nav, article {
+        width: 100%;
+        height: auto;
+      }
+    }
+    .header_text{
+      font-size: 20px;
+    }
+    #game_content{
+      display: flex;
+      flex-direction: column;
+      flex-grow: 8;
+      overflow-y: scroll;
+    }
+    .row{
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      flex-grow: 1;
+    }
+    .label{
+      width:70%;
+      display:flex;
+      align-items: center;
+    }
+    .item{
+      width: 10%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h2>A Place For Projects</h2>
+</header>
+
+<ul class='navBar' style="background-color: #333;">
+  <div class="flex-container" style="justify-content: center;">
+    <li style="flex-grow: 1;float:left">
+      <a href="../index.html" id="horizontal">
+        Home
+      </a>
+    </li>
+    <li style="flex-grow: 1;float:left">
+      <a href="fishing.html" id="horizontal"  class="active">
+        STEM
+      </a>
+    </li>
+    <li style="flex-grow: 1;float:left">
+      <a href="../Blog/blog_post_2.html" id="horizontal">
+        Blog
+      </a>
+    </li>
+    <li style="flex-grow: 1;float:left">
+      <a href="../Music/bear_boy.html" id="horizontal">
+        Music
+      </a>
+    </li>
+    <li style="flex-grow: 1;float:left">
+      <a href="../index.html" id="horizontal">
+        Visual Art
+      </a>
+    </li>
+  </div>
+</ul>
+
+<section>
+  <div class="sidebar" style="padding:10px 0 0 0">
+    <ul class='navBar' style="background-color: #c9c9c9;">
+      <li style="float:left">
+        <div class="flex-container">
+          <img src="Thumbnails/fishing.gif" height="90px">
+          <div style="padding:5px">
+            <a href="fishing.html">
+              <h4 style="display:inline">Go Fish!</h4>
+            </a>
+            </br>
+            <p style="display:inline">A short game with the goal of catching enough fish before the
+              time runs out.</p>
+          </div>
+        </div>
+      </li>
+      <li style="float:left">
+        <div class="flex-container">
+          <img src="Thumbnails/life.gif" height="90px">
+          <div style="padding:5px">
+            <a href="life.html">
+              <h4 style="display:inline">The Game of Life</h4>
+            </a>
+            </br>
+            <p style="display:inline">A simple yet powerful simulation model developed by John Conway in 1970.</p>
+          </div>
+        </div>
+      </li>
+      <li style="float:left">
+        <div class="flex-container">
+          <img src="Thumbnails/pong.gif" height="90px">
+          <div style="padding:5px">
+            <a href="pong.html">
+              <h4 style="display:inline">Pong</h4>
+            </a>
+            </br>
+            <p style="display:inline">This is a game called Pong, one of the first video games ever created.</p>
+          </div>
+        </div>
+      </li>
+      <li style="float:left">
+        <div class="flex-container">
+          <img src="Thumbnails/network.gif" height="90px">
+          <div style="padding:5px">
+            <a href="network.html">
+              <h4 style="display:inline">Position Reconstruction: Machine Learning</h4>
+            </a>
+            </br>
+            <p style="display:inline">In this project I explore using a neural network as a detector's position reconstruction
+            algorithm</p>
+          </div>
+        </div>
+      </li>
+      <li style="float:left">
+        <div class="flex-container">
+          <img src="Thumbnails/coffee_shop.png" height="90px">
+          <div style="padding:5px">
+            <a href="coffee_shop.html">
+              <h4 style="display:inline">Coffee Shop Game</h4>
+            </a>
+            </br>
+            <p style="display:inline">Manage a coffee shop in this simple business game.</p>
+          </div>
+        </div>
+      </li>
+      <li style="float:left">
+        <div class="flex-container">
+          <img src="Thumbnails/taga.png" height="90px">
+          <div style="padding:5px">
+            <a href="taga.html">
+              <h4 style="display:inline">Taga</h4>
+            </a>
+            </br>
+            <p style="display:inline">An RPG fishing game</p>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  
+  <article style="overflow-y:scroll;">
+    <div style="display: flex;flex-direction: column;">
+      <h1 style="margin-bottom: 0px;">Overview</h1>
+      <p>
+        In this game you're responsible for managing a coffee shop. Responsibilities include keeping your inventory stocked and 
+        selecting the best price to charge your customers for your coffee. You'll need to keep your funds high enough that you can 
+        afford to open your shop each day. If you don't have enough funds to open, you can sell either some of your coffee or some 
+        of your cups back to your supplier. Keep in mind the supplier will buy back the items at half the price you bought them for, 
+        so it's a situation you'll want to do your best to avoid.
+      </p>
+      <div style="display:flex; flex-direction: column;width:350px;height:350px;background-color: aliceblue;padding:10px; margin:auto">
+        <div style="display:flex;flex-direction: row;flex-grow: 1;">
+            <div style="flex-grow: 8;">
+                <span class="header_text">Coffee Shop Game</span>
+            </div>
+            <div style="flex-grow: 4;">
+                <span class="header_text">Day: </span><span class="header_text" id="day">0</span>
+            </div>
+        </div>
+        <div id="game_content">
+    
+        </div>
+    
+        <div style="display:flex;flex-direction: row;flex-grow: 1;">
+            <div style="flex-grow: 1;display: flex;justify-content: center; align-items: center;">
+                <button id="stats">Stats</button>
+            </div>
+            <div style="flex-grow: 1;display: flex;justify-content: center; align-items: center;">
+                <button id="menu">Menu</button>
+            </div>
+            <div style="flex-grow: 1;display: flex;justify-content: center; align-items: center;">
+                <button id="open"></button>
+            </div>
+            <div style="flex-grow: 1;display: flex;justify-content: center; align-items: center;">
+                <button id="nextDay" disabled>Next day</button>
+            </div>
+        </div>
+      </div>
+      <script src="coffee_shop.js"></script>
+      <h1 style="margin-bottom: 0px;">Analysis</h1>
+      <p>
+        Let's break down how this game works. Each day your shop will be visited by between 10 and 20 potential customers. The fraction 
+        of those people who decide to buy a coffee depends on the price of coffee that you've set. The plot below illustrates this behaviour.
+        I created this plot by playing the game for 50 days at a coffee price of 3 dollars, then averaging the customer-visitor ratio from that run.
+        Then I reset the game, incremented the coffee price and repeated the process. After repeating that 18 more times (to be clear, I wrote a
+        script that automated the process for me), I had the average customer-visitor ratio for whole number coffee prices between 3 and 22.
+        You can see that for very low coffee prices, the customer-visitor ratio is exactly 1. 
+        Then, the fraction of visitors who buy a coffee begins to decrease as the unit price of the coffee goes up. The customer-visitor ratio
+        continues to decrease towards the horizontal asymptote along the x axis until the price of the coffee is so high that the probability of 
+        a visitor choosing to buy a coffee is statistically negligible.
+      </p>
+      <div style="text-align: center;">
+        <img src="src/customer_ratio.png" width="400px">
+      </div>
+      <p>
+        So, if you set the price of your coffee to 2 dollars, every visitor you get will be a customer
+        (or in other words, the customer-visitor ratio that day will be 1). Yay! But wait... don't celebrate too early. 
+        Your supplier charges you 2 dollars per cup and 3 dollars for the coffee required to fill that cup, meaning you'd be selling each 
+        coffee at a loss of 3 dollars. Conversely, if you set the price of your coffee to 18 dollars, after factoring in the cost of materials  
+        you'd be selling each coffee at a gain of 12 dollars. However your customer-visitor ratio will be very low. With the added fact that 
+        it costs 20 dollars to open your shop everyday, this is a risky business model. The plot below shows that there is a sweet spot for
+        the price where the unit gain of selling a cup of coffee combines with a sufficiently high customer-visitor ratio to produce a coffee shop
+        will break even (on average).
+      </p>
+      <div style="text-align: center;">
+        <img src="src/profit.png" width="400px">
+      </div>
+      <p>
+        This plot was created using a similar process as the customer-visitor ratio plot. I ran the game for 1000 days with a coffee price of
+        6 dollars, then averaged the daily profit over the 1000 days. Then I reset the game, incremented the price to 7 dollars and repeated
+        the process (again, I used automation to speed up the process). You can see that the coffee shop showed a net positive profit for 
+        coffee prices between 9 and 12 dollars.
+      </p>
+
+    </div>
+  </article>
+</section>
+
+<footer>
+</footer>
+
+</body>
+</html>
+

@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>A Place For Projects - Programming</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+header {
+  background-color: #666;
+  padding: 5px;
+  text-align: center;
+  font-size: 25px;
+  color: white;
+}
+
+/* Create two columns/boxes that floats next to each other */
+.sidebar {
+  float: left;
+  width: 30%;
+  height: 500px; /* only for demonstration, should be removed */
+  background: #ccc;
+  overflow-y:scroll;
+}
+
+
+/* Style the list inside the menu */
+
+.flex-container{
+    display:flex;
+    flex-direction: row;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  border:solid;
+}
+
+li {
+  float: left;
+}
+
+#horizontal {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 30px;
+  text-decoration: none;
+}
+.active {
+  background-color: #04AA6D;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  background-color: #8e8e8e;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 70%;
+  background-color: #f1f1f1;
+  height: 500px; /* only for demonstration, should be removed */
+}
+
+/* Clear floats after the columns */
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+footer {
+  background-color: #777;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<header>
+  <h2>A Place For Projects</h2>
+</header>
+
+<ul style="background-color: #333;">
+  <div class="flex-container" style="justify-content: center;">
+    <li style="flex-grow: 1;">
+      <a href="../index.html" id="horizontal">
+        Home
+      </a>
+    </li>
+    <li style="flex-grow: 1;">
+      <a href="fishing.html" id="horizontal" class="active">
+        STEM
+      </a>
+    </li>
+    <li style="flex-grow: 1;">
+      <a href="../Blog/blog_post_2.html" id="horizontal">
+        Blog
+      </a>
+    </li>
+    <li style="flex-grow: 1;">
+      <a href="../Music/bear_boy.html" id="horizontal">
+        Music
+      </a>
+    </li>
+    <li style="flex-grow: 1;">
+      <a href="../index.html" id="horizontal">
+        Visual Art
+      </a>
+    </li>
+  </div>
+</ul>
+
+<section>
+  <div class="sidebar" style="padding:10px 0 0 0">
+    <ul style="background-color: #c9c9c9;">
+      <li>
+        <div class="flex-container">
+          <img src="Thumbnails/fishing.gif" height="90px">
+          <div style="padding:5px">
+            <a href="fishing.html">
+              <h4 style="display:inline">Go Fish!</h4>
+            </a>
+            </br>
+            <p style="display:inline">A short game with the goal of catching enough fish before the
+              time runs out</p>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="flex-container">
+          <img src="Thumbnails/life.gif" height="90px">
+          <div style="padding:5px">
+            <a href="life.html">
+              <h4 style="display:inline">The Game of Life</h4>
+            </a>
+            </br>
+            <p style="display:inline">A simple yet powerful simulation model developed by John Conway in 1970</p>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="flex-container">
+          <img src="Thumbnails/pong.gif" height="90px">
+          <div style="padding:5px">
+            <a href="pong.html">
+              <h4 style="display:inline">Pong</h4>
+            </a>
+            </br>
+            <p style="display:inline">This is a version of a game called Pong, one of the first video games ever created</p>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="flex-container">
+          <img src="Thumbnails/network.gif" height="90px">
+          <div style="padding:5px">
+            <a href="network.html">
+              <h4 style="display:inline">Network</h4>
+            </a>
+            </br>
+            <p style="display:inline">In this project I explore using a neural network as a detector's position reconstruction
+            algorithm</p>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="flex-container">
+          <img src="Thumbnails/coffee_shop.png" height="90px">
+          <div style="padding:5px">
+            <a href="coffee_shop.html">
+              <h4 style="display:inline">Coffee Shop Game</h4>
+            </a>
+            </br>
+            <p style="display:inline">Manage a coffee shop in this simple business game.</p>
+          </div>
+        </div>
+      </li>
+      <li style="float:left">
+        <div class="flex-container">
+          <img src="Thumbnails/taga.png" height="90px">
+          <div style="padding:5px">
+            <a href="taga.html">
+              <h4 style="display:inline">Taga</h4>
+            </a>
+            </br>
+            <p style="display:inline">An RPG fishing game</p>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  
+  <article style="overflow-y:scroll;">
+    <div class="flex-container" style="display: flex; flex-direction: column;">
+      <h1>Overview</h1>
+      <p>
+          Shown below is a visualization of how a neural network might be used to predict the positions of the bursts of light. 
+          We pass the times of the collisions as inputs to the network, each wall mapped to its own input node. 
+          Then the network propogates the data through the layers, until the final layer. Imagine perhaps each node in 
+          the output layer represents a quadrant of the detector (top right, top left, bottom left, bottom right) and the 
+          node that activates the most is the network's prediction as to which quadrant of the detector the burst happened in.
+      </p>
+      <div style="width: 100%;text-align: center;">
+        <img src="src/network/full_network.gif" width="500px" style="border: solid;">
+      </div>
+      <p>
+        So, in the animation the output node "22" activated the most (the cyan node), so that would mean the network predicted 
+        the burst occured in the bottom left quadrant of the detector. Designing a network that's efficient and accurate at
+        producing this behaviour is a whole problem in itself itself, and that's where the "learning" part of "machine learning"
+        comes into this. Using training and testing data sets, the network can "learn" how to accurately predict in which quadrant 
+        the burst happened, based only on the timing info fed to it by the detector.
+      </p>
+      <h1>Fitting a line to data</h1>
+      <p>
+        Thinking from the ground up, the system described in the previous section is kind of a far-off dream. In order to do this in
+        a way that feels intuitive (at least to me), we're going to have to scale back the complexity of the problem to a much, <i>much</i>
+        simpler one and build from there. We're going to start by using one of the simplest data models possible: the line. It only has two
+        parameters: a slope and a y intercept (we'll refer to them as m and b, respectively).
+      </p>
+      <div style="width: 100%;text-align: center;">
+        <img src="src/network/Fit_line.gif" width="300px">
+      </div>
+      <p>
+        Fitting a line to two data points is a relatively simple problem because there is definitely a "perfect" answer.
+        It'll always be possible to find a combination of a slope and a y intercept such that the line travels through both points.
+        The problem kind of spirals in difficulty when you increase the data set to three or more points though, assuming the points
+        are such that one line <i>cannot</i> go through all the points, such as in the example shown below. It's possible to select
+        a slope and y intercept so that a line goes perfectly through the first two data points, or through the last two data points,
+        but <i>not</i> all three. So how do we find a slope and y intercept that <i>best</i> represents the data set with the knowledge
+        that it can't be <i>perfect</i>?
+      </p>
+      <p>
+        Well, perhaps a question that's more important to answer first is <i>why</i> we want to find the slope and y intercept that best
+        fits the data. It would be very understandable for the connection to appear quite tenuous. I think the connection to neural networks
+        will make more sense if we delve a bit into how we create a line, specifically using the framework of an input-output machine.
+        When applied to algebra, this is called a <i>function</i>. 
+      </p>
+      <div style="width: 100%;text-align: center;">
+        <img src="src/network/BlackBox.gif" width="400px">
+      </div>
+
+      <p>
+        We now have a framework that we can use to visualize the problem a little more clearly. We can pick a certain slope and y
+        intercept and let our machine make a line for us that has those parameters. We can calculate the error associated with
+        that combination of parameters. If we recalculate that error for a slope that's slightly increased and the error goes down,
+        then the <i>rate of change</i> of the error with respect to <i>the slope</i> is negative. If the error goes up, the rate of
+        change is positive. Either way, if we <i>subtract</i> the rate of change of the error with respect to a parameter <i>from</i>
+        that parameter, we'll always get a model that has a lower error than the one before it. This is the method of <i>gradient
+        descent</i>. I've animated a step by step walkthrough of how this algorithm works using three separate plots that update in
+        parallel.
+      </p>
+      <div style="width: 100%;text-align: center;">
+        <img src="src/network/grad_descent_walkthrough.gif" width="800px">
+      </div>
+      <p>
+        You may notice that in that walkthrough, only the slope is being adjusted. The power of the gradient descent algorithm lies 
+        in treating the parameters of the model as a <i>vector</i>, and updating the parameters in parallel using a <i>vector</i>.
+        You can see the vectorized algorithm applied to a different data set in the animation shown below. You can see that both
+        the y-intercept and the slope are being updated in parallel, resulting in the model approaching its minimum error of 0.05.
+      </p>
+      <div style="width: 100%;text-align: center;">
+        <img src="src/network/Grad_descent.gif" width="300px">
+      </div>
+      <p>
+        There is still a large obstacle we need to overcome before we can build and train the network we saw in the first animation. 
+        The stepping stone is designing a network with multiple weights. It's a significant step because the implementation of a 
+        network with multiple weights will allow us to utilize a structure that we can scale up to a single network that can process 
+        4 independent inputs. We'll scale up the problem by adding an extra dimension to our parameter space. In this next problem, 
+        we're adjusting the parameters of a <i>plane</i> instead of a line. The fit model is analogous to a neural network with a 
+        single node that has <i>two</i> weights and a bias. The animation below shows how changing the plane's parameters affect the 
+        model's goodness of fit.
+      </p>
+      <div style="width: 100%;text-align: center;">
+        <img src="src/network/plane_solve.gif" width="500px">
+      </div>
+    </div>
+  </article>
+</section>
+
+<footer>
+</footer>
+
+</body>
+</html>
+
