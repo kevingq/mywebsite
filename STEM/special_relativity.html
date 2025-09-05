@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>A Place For Projects - Programming</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+header {
+  background-color: #666;
+  padding: 5px;
+  text-align: center;
+  font-size: 25px;
+  color: white;
+}
+
+/* Create two columns/boxes that floats next to each other */
+.sidebar {
+  float: left;
+  width: 30%;
+  height: 500px; /* only for demonstration, should be removed */
+  background: #ccc;
+  overflow-y:scroll;
+}
+
+
+/* Style the list inside the menu */
+
+.flex-container{
+    display:flex;
+    flex-direction: row;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  border:solid;
+}
+
+li {
+  float: left;
+}
+
+#horizontal {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 30px;
+  text-decoration: none;
+}
+.active {
+  background-color: #04AA6D;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  background-color: #8e8e8e;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 70%;
+  background-color: #f1f1f1;
+  height: 500px; /* only for demonstration, should be removed */
+}
+
+/* Clear floats after the columns */
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+footer {
+  background-color: #777;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<header>
+  <h2>A Place For Projects</h2>
+</header>
+
+<ul style="background-color: #333;">
+  <div class="flex-container" style="justify-content: center;">
+    <li style="flex-grow: 1;">
+      <a href="../index.html" id="horizontal">
+        Home
+      </a>
+    </li>
+    <li style="flex-grow: 1;">
+      <a href="fishing.html" id="horizontal" class="active">
+        STEM
+      </a>
+    </li>
+    <li style="flex-grow: 1;">
+      <a href="../Blog/blog_post_2.html" id="horizontal">
+        Blog
+      </a>
+    </li>
+    <li style="flex-grow: 1;">
+      <a href="../Music/bear_boy.html" id="horizontal">
+        Music
+      </a>
+    </li>
+    <li style="flex-grow: 1;">
+      <a href="../index.html" id="horizontal">
+        Visual Art
+      </a>
+    </li>
+  </div>
+</ul>
+
+<section>
+  <div class="sidebar" style="padding:10px 0 0 0">
+    <ul style="background-color: #c9c9c9;">
+      <li>
+        <div class="flex-container">
+          <img src="Thumbnails/fishing.gif" height="90px">
+          <div style="padding:5px">
+            <a href="fishing.html">
+              <h4 style="display:inline">Go Fish!</h4>
+            </a>
+            </br>
+            <p style="display:inline">A short game with the goal of catching enough fish before the
+              time runs out</p>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="flex-container">
+          <img src="Thumbnails/life.gif" height="90px">
+          <div style="padding:5px">
+            <a href="life.html">
+              <h4 style="display:inline">The Game of Life</h4>
+            </a>
+            </br>
+            <p style="display:inline">A simple yet powerful simulation model developed by John Conway in 1970</p>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="flex-container">
+          <img src="Thumbnails/pong.gif" height="90px">
+          <div style="padding:5px">
+            <a href="pong.html">
+              <h4 style="display:inline">Pong</h4>
+            </a>
+            </br>
+            <p style="display:inline">This is a version of a game called Pong, one of the first video games ever created</p>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="flex-container">
+          <img src="Thumbnails/network.gif" height="90px">
+          <div style="padding:5px">
+            <a href="network.html">
+              <h4 style="display:inline">Network</h4>
+            </a>
+            </br>
+            <p style="display:inline">In this project I explore using a neural network as a detector's position reconstruction
+            algorithm</p>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="flex-container">
+          <img src="Thumbnails/coffee_shop.png" height="90px">
+          <div style="padding:5px">
+            <a href="coffee_shop.html">
+              <h4 style="display:inline">Coffee Shop Game</h4>
+            </a>
+            </br>
+            <p style="display:inline">Manage a coffee shop in this simple business game.</p>
+          </div>
+        </div>
+      </li>
+      <li style="float:left">
+        <div class="flex-container">
+          <img src="Thumbnails/taga.png" height="90px">
+          <div style="padding:5px">
+            <a href="taga.html">
+              <h4 style="display:inline">Taga</h4>
+            </a>
+            </br>
+            <p style="display:inline">An RPG fishing game</p>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  
+  <article style="overflow-y:scroll;">
+    <div class="flex-container" style="display: flex; flex-direction: column;">
+      <h1>Overview</h1>
+      The theory of relativity is often a concept that commonly gets linked to Albert Einstein, but the history of relativity (as a framework used by physisists) goes
+      back many hundreds of years. So what even is relativity? Well, certainly a historian and a carpenter could bth give two answers that are both correct and equally 
+      different from the one we're going to explore here, because, broad strokes, studying relativity simply means understanding context. In physics, it means 
+      applying a framework of analysis (typically expressed in the form of equations) to switch between perspectives. 
+  </article>
+</section>
+
+<footer>
+</footer>
+
+</body>
+</html>
+
